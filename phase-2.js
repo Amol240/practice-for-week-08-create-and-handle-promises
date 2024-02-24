@@ -4,11 +4,10 @@ function stretch(timeLeft) {
   return new Promise((resolve, reject) => {
     setTimeout(()=>{
       if(timeLeft >= 1000){
-        resolve(console.log("done stretching"));
-        
+        console.log("done stretching")
+        resolve();
       }else{
         reject("Error: you dont have enough time to stretch");
-        
       }
     }, 1000);
 
@@ -22,11 +21,10 @@ function runOnTreadmill(timeLeft) {
   return new Promise((resolve, reject) =>{
     setTimeout(() => {
       if(timeLeft >=500){
-        resolve(console.log("done running on treadmill"));
-        
+        console.log("done running on treadmill")
+        resolve();
       }else{
         reject("Error: you dont have enough time to run on treadmill");
-        
       }
     }, 500);
   })
@@ -39,11 +37,10 @@ function liftWeights(timeLeft) {
   return new Promise((resolve, reject) => {
     setTimeout(()=>{
       if(timeLeft >= 2000){
-        resolve(console.log("done lifting weights"));
-        
+        console.log("done lifting weights")
+        resolve();
       }else{
         reject("Error: you dont have enough time to lift weights");
-        
       }
     },2000);
   });
@@ -67,7 +64,7 @@ Comment in each invocation of your workout function below and run the file
 */
 
 
-workout(500);
+// workout(500);
   // should print out the following:
     // Error:  you dont have enough time to stretch
 
@@ -85,7 +82,7 @@ workout(500);
     // Error:  you dont have enough time to lift weights
 
 
-// workout(4000);
+workout(4000);
   // should print out the following:
   //   done stretching
   //   done running on treadmill
